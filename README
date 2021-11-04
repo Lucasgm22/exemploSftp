@@ -1,0 +1,7 @@
+Dependencia Spring Integration SFTP Support
+https://mvnrepository.com/artifact/org.springframework.integration/spring-integration-sftp
+
+Para rodar é necessário subir o servidor sftp no dock usando o comando
+docker run -p 22:22 -d atmoz/sftp foo:pass:::upload
+
+https://hub.docker.com/r/atmoz/sftp
