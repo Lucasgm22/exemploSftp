@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 
@@ -33,7 +34,7 @@ class SftpTest {
 
         byte[] bytes = baos.toByteArray();
 
-        ByteArrayInputStream inputStream = new ByteArrayInputStream(bytes);
+        InputStream inputStream = new ByteArrayInputStream(bytes);
 
         new Sftp().upload(inputStream,"upload", "alunos" + LocalDateTime.now() + ".txt" );
     }
