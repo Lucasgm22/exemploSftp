@@ -32,9 +32,8 @@ class SftpTest {
         for (int i = 0; i < 4; i++ )
             baos.write(CSVUtils.stringArrayToCsvLine(alunos[i].toStringArray()).getBytes(StandardCharsets.UTF_8));
 
-        byte[] bytes = baos.toByteArray();
 
-        InputStream inputStream = new ByteArrayInputStream(bytes);
+        InputStream inputStream = new ByteArrayInputStream(baos.toByteArray());
 
         new Sftp().upload(inputStream,"upload", "alunos" + LocalDateTime.now() + ".txt" );
     }
